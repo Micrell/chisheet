@@ -1,4 +1,18 @@
-# scp
+# ssh-add
+
+## Add permanent private key
+
+Add `IdentifyFile`option to Host in `~/.ssh/config`
+```
+Host github.com
+    User git
+    IdentityFile ~/.ssh/githubKey
+```
+## List keys linked to current ssh-agent
+```sh
+#List keys linked to current ssh-agent
+ssh-add -l
+```
 
 # ssh-keygen
 ## Choose the encryption
@@ -20,13 +34,6 @@ ssh-keygen -f ~/tatu-key-ecdsa -t ecdsa -b 521
 ```sh
 #Add a comment attach to the key
 ssh-keygen -t ecdsa -b 521 -C "comment"
-```
-
-# ssh-add
-## List keys linked to current ssh-agent
-```sh
-#List keys linked to current ssh-agent
-ssh-add -l
 ```
 
 # External link
