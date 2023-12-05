@@ -43,9 +43,9 @@ docker logs your-gitlab-container-name 2>&1 | grep 'Password:'
 
 ## Change root password
 
-Get access to the ruby console:
+Get access to the ruby console (may need `sudo`):
 ```sh
-gitlab-rails console -e production
+gitlab-rails console
 ```
 
 Change the password:
@@ -54,4 +54,24 @@ user = User.where(id: 1).first
 user.password = 'new_password' 
 user.password_confirmation = 'new_password' 
 user.save!
+```
+
+## Create a personal access token programmatically
+
+Get access to the ruby console (may need `sudo`):
+```
+gitlab-rails console
+```
+
+Set the token:
+```ruby
+user = User.find_by_username('automation-bot') 
+token = user.personal_access_tokens.create(scopes: ['read_user', 'read_repository'], name: 'Automation token', expires_at: 365.days.from_now) 
+token.set_token('token-string-here123') 
+token.save!
+```
+
+It can also be done (may need `sudo`):
+```sh
+gitlab-rails runner "token = User.find_by_username('automation-bot').personal_access_tokens.create(scopes: ['read_user', 'read_repository'], name: 'Automation token', expires_at: 365.days.from_now); token.set_token('token-string-here123'); token.save!"
 ```
