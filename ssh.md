@@ -1,3 +1,16 @@
+# Add an authorized key
+
+## Generate key
+
+On your PC, generate a new key, for exemple:
+```sh
+ssh-keygen -t ecdsa -b 521 -C "myPC"
+```
+
+Then copy your .pub key in `.ssh/authorized_keys` on the server:
+⚠️ Ensure that `PubkeyAuthentication yes` is uncomment in `/etc/ssh/sshd_config`
+You may restart the `sshd`service if modifications where needed in sshd config file.
+You can also add `IdentityFile myprivatekey`to the server host in `~/.ssh/config`.
 # ssh-add
 
 ## Add permanent private key
