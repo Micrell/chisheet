@@ -9,6 +9,13 @@ See [[installation]]
 
 ## Step 2: Install Minikube
 
+Pour Linux :
+```sh
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+```
+
+Pour MacOS (apple silicon) :
 ```sh
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
 sudo install minikube-linux-arm64 /usr/local/bin/minikube
