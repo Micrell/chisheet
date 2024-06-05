@@ -2,6 +2,8 @@
 
 ## 1. Set up Docker's Apt repository.
 
+WARNING: If you get errors during install with APT, just redo it with the official doc at : https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
 ```bash
 # Add Docker's official GPG key:
 sudo apt-get update
