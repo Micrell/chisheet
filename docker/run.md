@@ -1,3 +1,10 @@
+# Interactive run
+
+```sh
+sudo docker run -it <image> bash
+```
+
+
 
 | OPTION   | ALIAS | EFFECT                                             |
 | -------- | ----- | -------------------------------------------------- |

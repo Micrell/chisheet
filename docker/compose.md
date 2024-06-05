@@ -1,7 +1,7 @@
 # Template
 
 ```yaml
-version: "3.7"
+version: "3.9"
 services:
 	<serviceName>:
 		container_name: <name> # postfix
@@ -17,6 +17,8 @@ services:
 		  - <anotherOne> # 192.168.1.1
 		ports:
 		  - <externalPort>:<internalPort> # 80:80 or 8880:80
+		volumes:
+			- <name>:/path/in/container # Ex for Mongo: /data/db
 
 networks:
 	<networkName>: # mail_net
@@ -26,6 +28,8 @@ networks:
 			config:
 			  - subnet: "<net@>/<mask>" # "172.20.0.0/24"
 				gateway: "gateway@" # "192.168.1.1"
+volumes:
+	<name>:
 ```
 
 # Start stack

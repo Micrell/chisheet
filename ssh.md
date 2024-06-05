@@ -1,3 +1,15 @@
+# Copy
+
+Copy file:
+```sh
+scp filename user@server:/path/to/filename
+```
+
+Copy dir:
+```sh
+scp -r dirname user@server:/path/to/dirname
+```
+
 # Add an authorized key
 
 ## Generate key
