@@ -40,6 +40,7 @@ minikube kubectl -- get po -A
 alias kubectl="minikube kubectl --"
 ```
 
+Do not forget to add the alias in `~/.bashrc` see [[alias]]
 # Uninstallation
 
 ## Step 1: Stop the Minikube Cluster
