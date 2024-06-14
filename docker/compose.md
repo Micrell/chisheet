@@ -24,12 +24,16 @@ networks:
 	<networkName>: # mail_net
 		external: true
 		ipam:
-			driver: <type> # bridge
+			driver: <type> # default is bridge
 			config:
 			  - subnet: "<net@>/<mask>" # "172.20.0.0/24"
 				gateway: "gateway@" # "192.168.1.1"
 volumes:
 	<name>:
+```
+
+```ad-info
+'version' attribute is only necessary to retro compatibility, if you write a new compose file you might omit it. 
 ```
 
 # Start stack
@@ -38,11 +42,16 @@ volumes:
 docker compose up
 ```
 
-| OPTION   | ALIAS | EFFECT                                  |
-| -------- | ----- | --------------------------------------- |
-| --build  |       | rebuild the images |
-| --detach | -d    | run stack in background                 |
+| OPTION   | ALIAS | EFFECT                  |
+| -------- | ----- | ----------------------- |
+| --build  |       | rebuild the images      |
+| --detach | -d    | run stack in background |
+## Example
 
+Run the compose file (must be alone) in the current directory in background: 
+```sh
+docker compose up -d
+```
 
 # Stop stack
 
