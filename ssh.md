@@ -1,13 +1,27 @@
 # Copy
 
-Copy file:
+## From host to server
+
+Copy file from host to server:
 ```sh
 scp filename user@server:/path/to/filename
 ```
 
-Copy dir:
+Copy dir from host to server:
 ```sh
 scp -r dirname user@server:/path/to/dirname
+```
+
+## From server to host
+
+Copy file from host to server:
+```sh
+scp user@server:/path/to/filename filename
+```
+
+Copy dir from host to server:
+```sh
+scp -r user@server:/path/to/dirname dirname
 ```
 
 # Add an authorized key
@@ -23,6 +37,7 @@ Then copy your .pub key in `.ssh/authorized_keys` on the server:
 ⚠️ Ensure that `PubkeyAuthentication yes` is uncomment in `/etc/ssh/sshd_config`
 You may restart the `sshd`service if modifications where needed in sshd config file.
 You can also add `IdentityFile myprivatekey`to the server host in `~/.ssh/config`.
+
 # ssh-add
 
 ## Add permanent private key
