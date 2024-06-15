@@ -17,7 +17,9 @@ Go to github.com, click new on your profile.
 
 ```sh
 git remote add origin <URL>
-# merging remote files to local files (Mandatory !)
-git pull origin <branch(main or master)> --allow-unrelated-histories
-git push -u origin master
+# If remote repo isn't empty merging remote files to local files (Mandatory !)
+# git pull origin <branch(main or master)> --allow-unrelated-histories
+# else create main branch
+git branch -M main
+git push -u origin main
 ```
