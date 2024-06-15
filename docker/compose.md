@@ -36,6 +36,24 @@ volumes:
 'version' attribute is only necessary to retro compatibility, if you write a new compose file you might omit it. 
 ```
 
+# Dotenv
+
+To use env variable from your `.env`file in your project, just call the variable with ${VAR}
+
+If your .env file is like:
+```
+TOKEN=mysupersecrettoken
+```
+then call the token in your compose.yaml like:
+```yaml
+services:
+	web:
+		envrionment:
+		  - TOKEN=${TOKEN}
+```
+
+
+
 # Start stack
 
 ```sh
