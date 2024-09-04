@@ -46,11 +46,3 @@ ws.append(aList)
 
 wb.save(<nameOfFile>)
 ```
-
-# REGEX
-
-```python
-import re
-
-
-```

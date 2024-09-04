@@ -2,7 +2,7 @@
 # Docker installation
 ## Install Docker
 
-See docker [[installation]]
+See docker [[docker_installation]]
 
 ## Create Docker Compose file
 

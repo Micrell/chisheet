@@ -5,7 +5,7 @@ https://minikube.sigs.k8s.io/docs/start/
 
 ## Step 1: Install Docker
 
-See [[installation]]
+See [[docker_installation]]
 
 ## Step 2: Install Minikube
 
@@ -40,7 +40,7 @@ minikube kubectl -- get po -A
 alias kubectl="minikube kubectl --"
 ```
 
-Do not forget to add the alias in `~/.bashrc` see [[alias]]
+Do not forget to add the alias in `~/.bashrc` see [[linux_alias]]
 # Uninstallation
 
 ## Step 1: Stop the Minikube Cluster
