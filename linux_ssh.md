@@ -47,6 +47,7 @@ Add `IdentifyFile`option to Host in `~/.ssh/config`
 Host github.com
     User git
     IdentityFile ~/.ssh/githubKey
+    Port 22
 ```
 ## List keys linked to current ssh-agent
 ```sh
