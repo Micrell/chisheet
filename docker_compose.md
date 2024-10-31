@@ -1,7 +1,6 @@
 # Template
 
 ```yaml
-version: "3.9"
 services:
 	<serviceName>:
 		container_name: <name> # postfix
@@ -9,6 +8,7 @@ services:
 		build:
 			context: <pathToDirOfDockerfile> # . or ./postfix/ assuming Dockerfile is in postfix dir
 			dockerfile: <dockerFileName> # Dockerfile
+		restart: <value> # always
 		networks:
 			<networkName>: # mail_net
 				ipv4_address: <ip@> # 172.18.0.2
@@ -22,10 +22,11 @@ services:
 
 networks:
 	<networkName>: # mail_net
-		external: true
+		name: mail_net
+		external: true # join pre-existing network
 		ipam:
 			driver: <type> # default is bridge
-			config:
+			config: # set custom network address
 			  - subnet: "<net@>/<mask>" # "172.20.0.0/24"
 				gateway: "gateway@" # "192.168.1.1"
 volumes:

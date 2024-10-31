@@ -4,7 +4,9 @@ tags:
 ---
 
 # Properties
-
+| Action           | Hotkey    |
+| ---------------- | --------- |
+| Add new property | `Cmd + ;` |
 ```
 ---
 tags:

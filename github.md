@@ -1,5 +1,3 @@
-
-
 # Set non empty local dir to git repo
 
 ## Set local dir as git repo:
