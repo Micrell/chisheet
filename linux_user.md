@@ -24,6 +24,7 @@ useradd [options] <username>  # Create user
 | -c      | Add a custom comment                       | useradd -c "minecraft service account" minecraft |
 | -r      | Create system user                         | useradd -rM minecraft                            |
 
+
 # Remove
 ```sh
 deluser <username>
