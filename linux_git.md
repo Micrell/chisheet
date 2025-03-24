@@ -1,3 +1,7 @@
+# Rename file
+```sh
+git mv <file>
+```
 
 # reset
 
