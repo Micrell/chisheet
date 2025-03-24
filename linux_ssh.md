@@ -55,6 +55,16 @@ Host github.com
 ssh-add -l
 ```
 
+## Add key to ssh agent
+```sh
+ssh-add /home/<user>/.ssh/<private_key>
+```
+
+## Start ssh agent
+```sh
+eval (ssh-agent -c)
+```
+
 # ssh-keygen
 ## Choose the encryption
 ```sh
