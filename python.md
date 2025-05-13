@@ -18,6 +18,7 @@ pyenv global <python_version>
 
 # Virtual envrionment
 
+## Linux
 ```sh
 #Go to the directory where you want to create the venv
 cd <my_dir>
@@ -26,6 +27,12 @@ cd <my_dir>
 python --version
 #Create the venv
 python -m venv <venv_name>
+```
+
+## Windows
+```sh
+# To activate venv
+cd .venv\Scripts; .\activate; cd ..\..
 ```
 
 # PIP

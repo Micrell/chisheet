@@ -10,6 +10,13 @@ Remove file added files
 git reset <file>
 ```
 
+# ENV var
+
+```sh
+$env:GIT_SSH_COMMAND = "ssh -p <port> -i ""C:\Users\<user>\.ssh\<key>"""
+```
+
+
 # log
 
 | OPTION    | EFFECT                      |

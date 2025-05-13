@@ -62,7 +62,7 @@ ssh-add /home/<user>/.ssh/<private_key>
 
 ## Start ssh agent
 ```sh
-eval (ssh-agent -c)
+eval $(ssh-agent -c)
 ```
 
 # ssh-keygen
